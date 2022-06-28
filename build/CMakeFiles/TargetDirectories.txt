@@ -1,4 +1,0 @@
-/home/usuario/examen-practica/build/CMakeFiles/rebuild_cache.dir
-/home/usuario/examen-practica/build/CMakeFiles/edit_cache.dir
-/home/usuario/examen-practica/build/CMakeFiles/triangle_main.dir
-/home/usuario/examen-practica/build/CMakeFiles/runTests.dir

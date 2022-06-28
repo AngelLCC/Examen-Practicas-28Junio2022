@@ -16,8 +16,8 @@
 
 int main(int argc, char* argv[]) {
   Usage(argc, argv);
-  const std::string kFicheroEntrada = argv[1]; 
-  ArchivoConOperaciones(kFicheroEntrada);
+  const std::string kFicheroEntrada{argv[1]}, kFicheroSalida{argv[2]};
+  ArchivoConOperaciones(kFicheroEntrada, kFicheroSalida);
   return 0;
 }
 

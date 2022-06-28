@@ -50,7 +50,7 @@ add_executable(runTests
     test/test_racional.cc)
 
 # Adds an executable target called "vector_main" to be built from the source files listed in the command invocation.
-add_executable(triangle_main
+add_executable(racional_main
     src/clase_racional.h
     src/clase_racional.cc
 		  src/racionales.cc)
@@ -62,4 +62,4 @@ target_compile_features(runTests PRIVATE cxx_std_17)
 
 # Add compile options to a target.
 target_compile_options(runTests PRIVATE -Wall -Wextra -Wpedantic)
-target_compile_options(triangle_main PRIVATE -Wall -Wextra -Wpedantic)
+target_compile_options(racional_main PRIVATE -Wall -Wextra -Wpedantic)

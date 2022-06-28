@@ -18,7 +18,7 @@
 #include <iostream>
 
 void Usage(int argc, char* argv[]);
-void ArchivoConOperaciones(const std::string kArchivo);
+void ArchivoConOperaciones(const std::string& kFicheroEntrada, const std::string& kFicheroSalida);
 
 class Racional {
  public:

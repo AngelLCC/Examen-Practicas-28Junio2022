@@ -23,9 +23,9 @@
  */
 
  void Usage(int argc, char* argv[]) {
-  if (argc != 3) {
+  if (argc < 2) {
     std::cout << argv[0] << " -- Números Racionales." << std::endl;
-    std::cout << "Modo de uso: " << argv[0] << "fichero_entrada fichero_salida";
+    std::cout << "Modo de uso: " << argv[0] << "fichero_entrada fichero_salida\n";
     std::cout << "Pruebe " << argv[0] << " --help para más información." << std::endl;
     exit(EXIT_SUCCESS);
   }
@@ -33,10 +33,10 @@
   if (parametro == "--help") {
     std::cout << argv[0] << " -- Números Racionales." << std::endl;
     std::cout << "Modo de uso: " << argv[0] << "fichero_entrada fichero_salida" << std::endl;;
-    std::cout << "fichero_entrada: Fichero de texto conteniendo líneas con un par de números racionales: \
-                  'a/b c/d' separados por un espacio\n";
-    std::cout << "fichero_salida: Fichero de texto que contendrá líneas con las operaciones realizadas \
-                  'a/b + c/d = n/m\n"; 
+    std::cout << "fichero_entrada: Fichero de texto conteniendo líneas con un par de números racionales:" 
+              << " 'a/b c/d' separados por un espacio\n";
+    std::cout << "fichero_salida: Fichero de texto que contendrá líneas con las operaciones realizadas" 
+              << " 'a/b + c/d = n/m\n"; 
     exit(EXIT_SUCCESS);
   }
 }
@@ -45,13 +45,13 @@
  *  a cada pareja de racionales del archivo de entrada.
  * @param[in] kArchivo Nombre del archivo a copiar.
  */
-void ArchivoConOperaciones(const std::string kArchivo) {
-  std::ifstream archivo_entrada{ kArchivo };
+void ArchivoConOperaciones(const std::string& kFicheroEntrada, const std::string& kFicheroSalida) {
+  std::ifstream archivo_entrada{ kFicheroEntrada };
   if (!archivo_entrada) {
-    std::cerr << "Oh, no se pudo abrir " << kArchivo << " para su lectura.\n";
+    std::cerr << "Oh, no se pudo abrir " << kFicheroEntrada << " para su lectura.\n";
     exit(EXIT_SUCCESS);
   }
-  std::ofstream archivo_salida{ "operaciones.txt" };
+  std::ofstream archivo_salida{ kFicheroSalida };
   std::string linea;
   for (int i = 1; std::getline(archivo_entrada, linea); ++i) {
     Racional primer_numero{1, 2}, 
