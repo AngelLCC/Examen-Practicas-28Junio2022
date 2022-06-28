@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/triangle_main.dir/src/clase_racional.cc.o CMakeFiles/triangle_main.dir/src/racionales.cc.o  -o triangle_main 

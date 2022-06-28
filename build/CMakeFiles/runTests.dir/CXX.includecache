@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/clase_racional.h
+iostream
+-
+
+/home/usuario/examen-practica/src/clase_racional.cc
+clase_racional.h
+/home/usuario/examen-practica/src/clase_racional.h
+cassert
+-
+fstream
+-
+
+/home/usuario/examen-practica/src/clase_racional.h
+iostream
+-
+
+/home/usuario/examen-practica/test/gtest_main.cc
+gtest/gtest.h
+-
+iostream
+-
+
+/home/usuario/examen-practica/test/test_racional.cc
+gtest/gtest.h
+-
+clase_racional.h
+/home/usuario/examen-practica/test/clase_racional.h
+
